@@ -5,36 +5,11 @@
     width: 100%;
     padding: 60px 0;
     background-color: #cff1ff;
-    /* 色とpddingの見方 */
 } 
 
 .inner {
     margin: 0 auto;
     width: 600px;
-}
-
-.content_title {
-    font-size: 18px;
-    color: black;
-}
-
-.input_section {
-    margin-top: 25px;
-    /* どこで25pxっって見るの */
-}
-
-.label_text {
-    font-size: 14px;
-    color: #464646;
-}
-
-.personal_content, .acconut_content, .contact_content, .subscrption_content, .submit_cntent, {
-    margin-top: 50px; 
-    /* どこに50って書いてるの？ */
-}
-
-.required {
-    color: #e40000;
 }
 
 .page_title {
@@ -48,7 +23,6 @@
     padding: 50px;
     background: #ecfaff;
     margin-bottom: 60px;
-    /* どこに書いてるの？ */
   }
 
 .form_title {
@@ -56,30 +30,28 @@
     text-align: center;
 }
 
-.input_area {
-    width: 100%;
-    height: 35px;
-    margin-top: 6px;
-    padding: 5px;
-    /* なんのためにpadding入れるの？ */
-    color: #545658;
-    /* どこでこの値見るの？ */
-    box-sizing: border-box;
-    border: 1px solid #d9d9d9;
-    /* この色もどこで見る？ */
-    background-color: #fbfbfb;
+.personal_content, .account_content, .contact_content, .subscription_content, .submit_cntent {
+    margin-top: 50px; 
+    /* 全てのcontentを設定している */
 }
 
-.input_area:focus {
-    background-color: #fff;
-    border-color: rgba(93, 130, 194, 0.4);
-    box-shadow: 0px 0px 0px 2px rgba(1, 90, 191, 0.1);
-    /* わけがわからないです */
-  }
+.content_title {
+    font-size: 18px;
+    color: #000;
+    /* 全てのcontent_titleを設定している */
+}
 
-.select_area, .gender_area {
-  margin-top: 6px;
-  /* どこでtop見るんですか？ */
+.input_section {
+    margin-top: 25px;
+}
+
+.label_text {
+    font-size: 14px;
+    color: #464646;
+}
+
+.required {
+    color: #e40000;
 }
 
 .select_unit {
@@ -87,17 +59,27 @@
     position: relative;
 }
 
-.select_unit::after {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    right: 10px;
-    top: 45%;
-    display: inline-block;
-    border-bottom: 2px solid #c3c3c3;
-    transform: rotate(45deg);
-    /* 解説が欲しいです */
+.input_area {
+    width: 100%;
+    height: 35px;
+    margin-top: 6px;
+    padding-left: 5px;
+    /* なんのためにpadding入れるの？ padding-leftじゃだめ？ */
+    color: #545658;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    background-color: #fbfbfb;
+}
+
+.input_area:focus {
+    background-color: #fff;
+    border-color: rgba(93, 130, 194, 0.4);
+    box-shadow: 0px 0px 0px 2px rgba(1, 90, 191, 0.1);
+    /* どこに書いているの？ */
+}
+
+.select_area, .gender_area {
+    margin-top: 6px;
 }
 
 .gender_element {
@@ -122,14 +104,13 @@
     left: 0px;
     width: 14px;
     height: 14px;
-    /* どこで値見るの？ */
     background-color: #fbfbfb;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
     transform: translateY(-50%);
-  }
+}
 
-  .gender_content:checked+span:after {
+.gender_content:checked+span:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -139,14 +120,28 @@
     background-color: #017cbf;
     border-radius: 50%;
     transform: translateY(-50%);
-  }
+}
 
-  .subscription_label {
+.select_unit::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right: 10px;
+    top: 45%;
+    display: inline-block;
+    border-bottom: 2px solid #c3c3c3;
+    border-right: 2px solid #c3c3c3;
+    transform: rotate( 45deg);
+    /* 解説が欲しいです */
+}
+
+.subscription_label {
     position: relative;
     padding-left: 25px;
-  }
+}
   
-  .subscription_label:before {
+.subscription_label:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -156,7 +151,7 @@
     margin-top: -8px;
     border: 1px solid #d9d9d9;
     background: #ffffff;
-  }
+}
   
   .subscription_unit input:checked+.subscription_label:after {
     content: "";
@@ -170,3 +165,37 @@
     border-bottom: 3px solid #0140bf;
     transform: rotate(45deg);
   }
+
+.submit_content {
+    margin-top: 50px;
+}
+
+.btn_submit {
+    padding: 13px;
+    background: #0170bf;
+    color: #fff;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.other-text {
+    margin-top: 25px;
+    font-size: 10px;
+}
+
+/* 聞くこと
+・性別や購買情報の位置づれ、どうしたらいいのかわかんない
+※四角やぶいのかげの位置
+・input_areaをセレクトしたときに、青くなるんのを白にしたいけど、どこを見ればcssが出てくるかわかんない
+※input_area:focusのこと
+・ */
