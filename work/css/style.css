@@ -1,11 +1,22 @@
 @charset "UTF-8";
 
 /* work */
+
+input, select, button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0px;
+}
+
 .base {
     width: 100%;
     padding: 60px 0;
-    background-color: #cff1ff;
-} 
+    background: #cff1ff;
+}
 
 .inner {
     margin: 0 auto;
@@ -15,7 +26,6 @@
 .page_title {
     margin-bottom: 60px;
     font-size: 28px;
-    color: #000;
     text-align: center;
 }
 
@@ -23,22 +33,20 @@
     padding: 50px;
     background: #ecfaff;
     margin-bottom: 60px;
-  }
+}
 
 .form_title {
     font-size: 24px;
     text-align: center;
 }
 
-.personal_content, .account_content, .contact_content, .subscription_content, .submit_cntent {
-    margin-top: 50px; 
-    /* 全てのcontentを設定している */
+.personal_content, .account_content, .contact_content, .subscription_content, .submit_content {
+    margin-top: 50px;
 }
 
 .content_title {
     font-size: 18px;
     color: #000;
-    /* 全てのcontent_titleを設定している */
 }
 
 .input_section {
@@ -54,72 +62,24 @@
     color: #e40000;
 }
 
-.select_unit {
-    width: 100%;
-    position: relative;
-}
-
 .input_area {
     width: 100%;
     height: 35px;
     margin-top: 6px;
-    padding-left: 5px;
-    /* なんのためにpadding入れるの？ padding-leftじゃだめ？ */
-    color: #545658;
+    padding: 5px;
+    color: #545654;
     box-sizing: border-box;
     border: 1px solid #d9d9d9;
-    background-color: #fbfbfb;
-}
-
-.input_area:focus {
-    background-color: #fff;
-    border-color: rgba(93, 130, 194, 0.4);
-    box-shadow: 0px 0px 0px 2px rgba(1, 90, 191, 0.1);
-    /* どこに書いているの？ */
+    background: #fbfbfb;
 }
 
 .select_area, .gender_area {
     margin-top: 6px;
 }
 
-.gender_element {
-    margin-left: 10px;
-}
-
-.gender_element:first-child {
-    margin-left: 0;
-}
-
-.gender_element span {
-   position: relative;
-   display: inline-block;
-   padding: 3px 3px 3px 20px;
-   color: #545658;
-}
-
-.gender_element span:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    width: 14px;
-    height: 14px;
-    background-color: #fbfbfb;
-    border: 1px solid #d9d9d9;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-
-.gender_content:checked+span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    background-color: #017cbf;
-    border-radius: 50%;
-    transform: translateY(-50%);
+.select_unit {
+    width: 100%;
+    position: relative;
 }
 
 .select_unit::after {
@@ -132,16 +92,55 @@
     display: inline-block;
     border-bottom: 2px solid #c3c3c3;
     border-right: 2px solid #c3c3c3;
-    transform: rotate( 45deg);
-    /* 解説が欲しいです */
+    transform: rotate(45deg);
+}
+
+.gender_element {
+    margin-left: 10px;
+}
+
+.gender_element:first-child {
+    margin-left: 0;
+}
+
+.gender_element span {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 20px;
+    color: #545654;
+}
+
+.gender_element span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    background-color: #fbfbfb;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.gender_element:checked+span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #017cbf;
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
 .subscription_label {
     position: relative;
-    padding-left: 25px;
+    margin-left: 25px;
 }
-  
-.subscription_label:before {
+
+.subscription_label::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -150,10 +149,11 @@
     height: 15px;
     margin-top: -8px;
     border: 1px solid #d9d9d9;
-    background: #ffffff;
+    background: #ffffff
+    ;
 }
-  
-  .subscription_unit input:checked+.subscription_label:after {
+
+.subscription_unit input:checked+.subscription_label::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -164,7 +164,7 @@
     border-right: 3px solid #0140bf;
     border-bottom: 3px solid #0140bf;
     transform: rotate(45deg);
-  }
+}
 
 .submit_content {
     margin-top: 50px;
@@ -173,7 +173,7 @@
 .btn_submit {
     padding: 13px;
     background: #0170bf;
-    color: #fff;
+    color: #ffffff;
 }
 
 .btn {
@@ -181,21 +181,21 @@
     display: inline-block;
     border: 1px solid #d9d9d9;
     border-radius: 3px;
+    box-sizing: border-box;
     font-size: 13px;
     font-weight: 500;
     text-align: center;
     transition: 0.3s;
+    padding: 13px;
     width: 100%;
 }
 
 .other-text {
     margin-top: 25px;
-    font-size: 10px;
+    font-size: 10px
 }
 
-/* 聞くこと
-・性別や購買情報の位置づれ、どうしたらいいのかわかんない
-※四角やぶいのかげの位置
-・input_areaをセレクトしたときに、青くなるんのを白にしたいけど、どこを見ればcssが出てくるかわかんない
-※input_area:focusのこと
-・ など*/
+.link-color {
+    color: #0170bf;
+    text-decoration: none;
+}
