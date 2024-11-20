@@ -17,33 +17,30 @@
           <div class="personal_content">
             <h3 class="content_title">個人情報</h3>
             <div class="input_section">
-              <label class="label_text">名字
-                <span class="required">※</span>
-              </label>
+              <label class="label_text">名字</label>
+              <span class="required">※</span>
               <input 
-               class="input_area" 
+               class="input_area"
                id="family_name" 
-               type="text" 
-               name="name" 
-               autocomplete="family-name" 
+               type="text"
+               name="name"
+               autocomplete="family_name"
                required>
             </div>
             <div class="input_section">
-              <label class="label_text">名前
-                <span class="required">※</span>
-              </label>
+              <label class="label_text">名前</label>
+              <span class="required">※</span>
               <input 
-               class="input_area" 
-               id="given_name" 
-               type="text" 
-               name="name" 
-               autocomplete="cc-given-name" 
+               class="input_area"
+               id="given_name"
+               type="text"
+               name="name"
+               autocomplete="given_name"
                required>
             </div>
             <div class="input_section">
-              <label class="label_text">生年月日
-                <span class="required">※</span>
-              </label>
+              <label class="label_text">生年月日</label>
+              <span class="required">※</span>
               <div class="select_area is_flex">
                 <div class="select_unit">
                   <select class="input_area" name="year">
@@ -76,11 +73,11 @@
                     <option value>10</option>
                     <option value>11</option>
                     <option value>12</option>
-                  </select> 
+                  </select>
                 </div>
                 <div class="select_unit">
                   <select class="input_area" name="day">
-                    <option value disabled selected>月</option>
+                    <option value disabled selected>日</option>
                     <option value>1</option>
                     <option value>2</option>
                     <option value>3</option>
@@ -96,37 +93,32 @@
               </div>
             </div>
             <div class="input_section">
-              <p class="label_text">
-                性別
-                <span class="required">※</span>
-              </p>
+              <label class="label_text">性別</label>
+              <span class="required">※</span>
               <div class="gender_area">
                 <label class="gender_element">
-                  <input 
-                   class="gender_content" 
-                   type="radio" 
-                   name="gender" 
-                   value="man"
-                   />
-                   <span>男性</span>
-                </label>
-                <label class="gender_element">
-                  <input 
+                  <input
                    class="gender_content"
                    type="radio"
                    name="gender"
-                   value="woman"
-                   />
-                   <span>女性</span>
+                   value="man">
+                  <span>男性</span>
                 </label>
                 <label class="gender_element">
-                  <input 
-                   class="gender_element"
+                  <input
+                   class="gender_content"
                    type="radio"
                    name="gender"
-                   value="other"
-                   />
-                   <span>その他</span>
+                   value="woman">
+                  <span>女性</span>
+                </label>
+                <label class="gender_element">
+                  <input
+                   class="gender_content"
+                   type="radio"
+                   name="gender"
+                   value="other">
+                  <span>その他</span>
                 </label>
               </div>
             </div>
@@ -148,10 +140,8 @@
           <div class="account_content">
             <h3 class="content_title">アカウント情報</h3>
             <div class="input_section">
-              <label class="label_text" for="account_name">
-                アカウント名
-                <span class="required">※</span>
-              </label>
+              <label class="label_text" for="account_name">アカウント名</label>
+              <span class="required">※</span>
               <input 
                class="input_area"
                id="account_name"
@@ -159,77 +149,67 @@
                required>
             </div>
             <div class="input_section">
-              <label class="label_text" for="email">
-                メールアドレス
-                <span class="required">※</span>
-              </label>
-              <input
+              <label class="label_text" for="email">メールアドレス</label>
+              <span class="required">※</span>
+              <input 
                class="input_area"
                id="email"
-               type="text"
+               type="email"
                autocomplete="email"
                required>
             </div>
             <div class="input_section">
-              <label class="label_text" for="password">
-                パスワード
-                <span class="required">※</span>
-                <input
-                 class="input_area"
-                 id="password"
-                 type="text"
-                 required>
-              </label>
-              <div class="input_section">
-                <label class="label_text" for="duplication_password">
-                  確認用パスワード
-                  <span class="required">※</span>
-                  <input
-                   class="input_area"
-                   id="duplication_password"
-                   type="text"
-                   required>
-                </label>
-              </div>
+              <label class="label_text" for="password">パスワード</label>
+              <span class="required">※</span>
+              <input
+               class="input_area"
+               id="password"
+               type="password"
+               required>
+            </div>
+            <div class="input_section">
+              <label class="label_text" for="duplication_password">確認用パスワード</label>
+              <span class="required">※</span>
+              <input
+               class="input_area"
+               id="duplication_password"
+               type="password"
+               required>
             </div>
           </div>
           <div class="contact_content">
             <h3 class="content_title">連絡先</h3>
             <div class="input_section">
-              <label class="label_text" for="address">
-                住所
-                <span class="required">※</span>
-                <input
-                 class="input_area"
-                 id="address"
-                 type="text"
-                 required>
-              </label>
-              <div class="input_section">
-                <label class="label_text" for="email">
-                  電話番号
-                  <span class="required">※</span>
-                </label>
-                <input
-                 class="input_area"
-                 id="tel"
-                 type="text"
-                 autocomplete="tel"
-                 required>
-              </div>
+              <label class="label_text" for="address">住所</label>
+              <span class="required">※</span>
+              <input
+               class="input_area"
+               id="address"
+               type="text"
+               required>
             </div>
-          </div>
-          <div class="subscription_content">
-            <h3 class="content_title">購買情報</h3>
-            <div class="input_section subscription_unit">
+            <div class="input_section">
+              <label class="label_text" for="email">電話番号</label>
+              <span class="required">※</span>
               <input 
+               class="input_area"
+               id="tel"
+               type="tel"
+               autocomplete="tel"
+               required>
+          </div>
+          <div class="subscrition_content">
+            <h3 class="content_title">購買情報</h3>
+            <div class="input_section subscrition_unit">
+              <input
                type="checkbox"
-               name="subscription"
+               name="subscrition"
                value="email-magazine"
                id="email-magazine">
-              <label class="label_text subscription_label" for="email-magazine">
-                メールマガジン
-              </label>
+              <label
+               class="label_text 
+               subscrition_label" 
+               for="email-magazine">メールマガジン</label>
             </div> 
             <div class="input_section subscription_unit">
               <input
@@ -238,13 +218,13 @@
                name="subscription"
                value="coupon"
                id="coupon">
-              <label class="label_text subscription_label">
-                クーポン
-              </label>
+              <label class="label_text subscription_label" for="coupon">クーポン</label>
             </div>
           </div>
           <div class="submit_content">
-            <button class="btn btn_submit" type="submit">アカウント作成</button>
+            <button 
+             class="btn btn_submit"
+             type="submit">アカウント作成</button>
             <p class="other-text">
               アカウントを作成することにより、
               <a class="link-color" href="#">利用規約</a>
