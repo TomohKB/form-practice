@@ -110,7 +110,7 @@ input, select, button {
     color: #545654;
 }
 
-.gender_element span::before {
+.gender_element span:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -123,7 +123,7 @@ input, select, button {
     transform: translateY(-50%);
 }
 
-.gender_element:checked+span::after {
+.gender_element input[type="radio"]:checked+span:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -137,7 +137,7 @@ input, select, button {
 
 .subscription_label {
     position: relative;
-    margin-left: 25px;
+    padding: 25px;
 }
 
 .subscription_label::before {
@@ -149,8 +149,7 @@ input, select, button {
     height: 15px;
     margin-top: -8px;
     border: 1px solid #d9d9d9;
-    background: #ffffff
-    ;
+    background: #ffffff;
 }
 
 .subscription_unit input:checked+.subscription_label::after {
@@ -188,6 +187,12 @@ input, select, button {
     transition: 0.3s;
     padding: 13px;
     width: 100%;
+}
+
+.btn_submit:active {
+    background: #fff;
+    color: #0170bf;
+    border: 1px solid #d9d9d9;
 }
 
 .other-text {
